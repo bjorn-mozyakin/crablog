@@ -1,0 +1,24 @@
+.main {
+  display: block;
+  width: 100%;
+  min-width: 320px;
+
+  &__container {
+    display: flex;
+    max-width: 1000px;
+    width: 95%;
+    min-width: 300px;
+    margin: 0 auto;
+    padding: 20px 0;
+
+    @media (max-width: 740px) {
+      flex-direction: column;
+    }
+  }
+}
+
+
+
+
+
+

@@ -1,0 +1,60 @@
+.header {
+  display: block;
+  width: 100%;
+  min-width: 320px;
+  border-bottom: 2px solid gray;
+  background-color: $colorBgDark;
+
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    width: 95%;
+    height: 50px;
+    margin: 0 auto;
+
+    @media (max-width: 460px) {
+      margin: 10px 0;
+      height: auto;
+      flex-direction: column;
+    }
+  }
+
+  &__logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  &__search {
+    display: inline-flex;
+  }
+
+  &__search-inpt {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 200px;
+    height: 30px;
+    border: none;
+    border-radius: 3px 0 0 3px;
+    padding: 5px 10px;
+    font-size: 18px;
+  }
+
+  &__search-btn {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 0 3px 3px 0;
+    background: url(img/search.png) center center no-repeat;
+    background-color: $colorGoldDark;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $colorGold;
+    }
+  }
+}

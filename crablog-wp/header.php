@@ -69,16 +69,14 @@
 <body>
 
   <div class="wrapper_all">
-    <div class="wrapper_header">
-      <header class="header">
-        <div class="wrapper_search">
-          <?php get_search_form(); ?>
+    <header class="header">
+      <div class="header__container">
+        <div class="header__logo"><a href="/">CRABLOG.RU</a></div>
+        <?php get_search_form(); ?>
 <!--           <input type="text" name="search_inpt" class="search_inpt">
           <button class="search_btn"></button> -->
-        </div>
-        <div class="logo"><a href="/">CRABLOG.RU</a></div>
-      </header>
-    </div>
+      </div>
+    </header>
 
 
 <!--

@@ -1,0 +1,94 @@
+
+.sidebars {
+  box-sizing: border-box;
+  width: 260px;
+  //flex: 1 0;
+
+  padding-left: 20px;
+  margin: 0;
+
+  @media (max-width: 740px) {
+    width: 100%;
+    padding-left: 0;
+  }
+}
+
+
+.widget {
+  padding: 5px 20px 20px 20px;
+  margin: 0 0 20px 0;
+  background-color: darken($cWhite, 8%);
+  border-radius: 3px;
+}
+
+.widgettitle {
+  border-bottom: 1px solid $colorBgDark;
+}
+
+.widget_text {
+  padding: 0;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0 5px;
+  margin: 5px;
+  border-radius: 3px;
+  background-color: $colorGoldDark;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $colorGold;
+  }
+}
+
+
+.s2_form_widget {
+  text-align: center;
+
+  & input[type="text"] {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 30px;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    font-size: 18px;
+  }
+
+  & input[type="submit"] {
+    display: inline-block;
+    box-sizing: border-box;
+    width: auto;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    background-color: $colorCodeBorder;
+    cursor: pointer;
+
+    &:hover {
+      background-color: gray;
+    }
+  }
+}
+
+
+
+.about-author {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 3px;
+  font-size: 24px;
+  text-transform: uppercase;
+  background-color: $colorCodeBorder;
+  color: $colorBgDark;
+  cursor: pointer;
+
+  &:hover {
+    background-color: gray;
+  }
+}
+

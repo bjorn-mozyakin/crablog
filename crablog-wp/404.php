@@ -4,11 +4,11 @@ Template Name: zrak-wp
 */
 ?>
 <?php get_header(); ?>
-<div class="wrapper_main">
-  <div class="main clearfix">
-    <div class="articles">
-      <div class="article_container">
-        <div class="article">
+<div class="main">
+  <div class="main__container">
+    <div class="content">
+      <article class="article">
+        <div class="article__container">
           <h2 class='pagetitle'>Ошибка 404 - страница не найдена</h2>
           <p><strong>Возможные причины:</strong></p>
           <ul>
@@ -20,7 +20,7 @@ Template Name: zrak-wp
           </ul>
           <p><strong>Пожалуйста, попробуйте перейти на <a href="/" target="_self" title="Главная страница">главную страницу</a> сайта.</strong></p>
         </div>
-      </div>
+      </article>
     </div>
     <?php get_sidebar('primary'); ?>
   </div>

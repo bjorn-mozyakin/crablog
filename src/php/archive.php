@@ -4,11 +4,11 @@ Template Name: zrak-wp
 */
 ?>
 <?php get_header(); ?>
-<div class="wrapper_main">
-  <div class="main clearfix">
-    <div class="articles">
-      <div class="article_container">
-        <div class="article">
+<div class="main">
+  <div class="main__container">
+    <div class="content">
+      <article class="article">
+        <div class="article__container">
 
           <?php if ( have_posts() ) : ?>
             <h1 class="title-style"><?php
@@ -34,7 +34,7 @@ Template Name: zrak-wp
             ?></h1>
           <?php while ( have_posts() ) : the_post(); ?>
             <h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
-            <p class="article-info"><img src="<?php bloginfo('template_url'); ?>/images/icons/date.png" /> <?php the_time('j F Y'); ?> | <!--<?php the_author_posts_link(); ?> | --><?php the_category(', '); ?><!--в <?php the_time('G:i'); ?> | <?php comments_number('Нет комментариев', '1 комментарий', '% comments'); ?>--></p>
+            <p class="article__info"><img src="<?php bloginfo('template_url'); ?>/img/date.png" /> <?php the_time('j F Y'); ?> | <!--<?php the_author_posts_link(); ?> | --><?php the_category(', '); ?><!--в <?php the_time('G:i'); ?> | <?php comments_number('Нет комментариев', '1 комментарий', '% comments'); ?>--></p>
             <!--<?php the_date_xml(); ?>-->
             <!--<?php the_excerpt(); ?>-->
             <p><?php the_post_thumbnail(); ?></p>
@@ -49,7 +49,7 @@ Template Name: zrak-wp
             <?php posts_nav_link(); ?>
           </div>
         </div>
-      </div>
+      </article>
     </div>
     <?php get_sidebar('primary'); ?>
         <!--<?php get_sidebar('secondary'); ?>-->
