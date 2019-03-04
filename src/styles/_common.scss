@@ -30,9 +30,3 @@ img.size-medium {
   margin: 10px 0;
   border-radius: 3px;
 }
-
-// Хак, без которого полный текст статьи слишком сильно распирает и смещает сайдбар
-// Подробности тут: https://weblog.west-wind.com/posts/2016/Feb/15/Flexbox-Containers-PRE-tags-and-managing-Overflow
-pre {
-  max-width: 0;
-}
