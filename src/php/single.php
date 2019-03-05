@@ -11,7 +11,7 @@ Template Name: zrak-wp
         <article class="article">
           <div class="article__container">
             <h1><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
-            <p class="article__info"><img src="<?php bloginfo('template_url'); ?>/img/date.png" alt="Иконка календаря" /> <?php the_time('j F Y'); ?> | <!--<?php the_author_posts_link(); ?> | --><?php the_category(', '); ?><!--в <?php the_time('G:i'); ?> | <?php comments_number('Нет комментариев', '1 комментарий', '% comments'); ?>--></p>
+            <p class="article__info"><?php the_time('j F Y'); ?> | <!--<?php the_author_posts_link(); ?> | --><?php the_category(', '); ?><!--в <?php the_time('G:i'); ?> | <?php comments_number('Нет комментариев', '1 комментарий', '% comments'); ?>--></p>
             <p><?php the_content(); ?></p>
             <p class="tags"><?php the_tags(); ?></p>
             <hr />

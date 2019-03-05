@@ -10,6 +10,7 @@ var cssnano = require('gulp-cssnano');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 
+var svgSprite = require('gulp-svg-sprite');
 var spritesmith = require('gulp.spritesmith');
 var imagemin = require('gulp-imagemin');
 
@@ -51,12 +52,9 @@ gulp.task('php', function(){
 });
 
 // IMG
-gulp.task('img_icon', function(){
+gulp.task('img_sprite', function(){
   // return gulp.src(['./src/**/*.jpg', './src/**/*.png', './src/**/*.ico', '!src/images/icons/**/*', '!src/images/icons'])
-  return gulp.src(['./src/img/icons/**/*'])
-    .pipe(imagemin({
-      progressive: true,
-    }))
+  return gulp.src(['./src/img/sprite.svg'])
     .pipe(gulp.dest('./crablog-wp/img'));
 });
 
@@ -69,8 +67,39 @@ gulp.task('img_main', function(){
     .pipe(gulp.dest('./crablog-wp'));
 });
 
-gulp.task('assets', function(){
-  runSequence('img_icon', 'img_main');
+
+// Sprites
+var config = {
+  shape : {
+    spacing : {
+      padding : 2
+    }
+  },
+  mode : {
+    css : {
+      layout: 'packed',
+      dest : '.',
+      sprite: 'img/sprite.svg',
+      render      : {
+        scss: {
+          dest: 'styles/_sprite.scss'
+        }
+      },
+      bust: false,
+      dimensions: true,
+      prefix: '.svg_'
+    }
+  }
+};
+
+gulp.task('create_sprite', function () {
+  return gulp.src('./src/svg/**/*.svg')
+    .pipe(svgSprite(config))
+    .pipe(gulp.dest('./src'));
+});
+
+gulp.task('assets', function() {
+  runSequence('create_sprite', ['img_sprite', 'img_main']);
 });
 
 //Fonts
@@ -113,6 +142,7 @@ gulp.task('build', function(){
 gulp.task('watch', function() {
   gulp.watch('./src/php/**/*.php', ['php']);
   gulp.watch('./src/img/**/*.*', ['assets']);
+  gulp.watch('./src/svg/**/*.*', ['assets']);
   gulp.watch(['./src/styles/**/*.scss'], ['sass']);
   gulp.watch(['./src/js/**/*.js'], ['scripts']);
 })

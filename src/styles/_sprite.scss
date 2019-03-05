@@ -1,0 +1,25 @@
+%svg-common {
+	background: url("img/sprite.svg") no-repeat;
+}
+
+.svg_arrow-up {
+	@extend %svg-common;
+	background-position: 0 0;
+	width: 40px;
+	height: 40px;
+}
+
+.svg_date {
+	@extend %svg-common;
+	background-position: 83.33333333333333% 100%;
+	width: 16px;
+	height: 16px;
+}
+
+.svg_search {
+	@extend %svg-common;
+	background-position: 100% 0;
+	width: 24px;
+	height: 24px;
+}
+

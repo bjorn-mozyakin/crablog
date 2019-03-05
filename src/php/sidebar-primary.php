@@ -3,4 +3,5 @@
 		<p>Ничего не выведено в сайдбар</p>
 	<?php endif; ?>
 	<?php get_links_list(); ?>
+	<?php wp_list_bookmarks(); ?>
 </ul>

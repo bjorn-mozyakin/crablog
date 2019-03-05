@@ -32,10 +32,12 @@
   }
 
   &__search-inpt {
-    display: inline-block;
+    display: inline-flex;
     box-sizing: border-box;
     width: 200px;
     height: 30px;
+    margin: 0;
+    padding: 0;
     border: none;
     border-radius: 3px 0 0 3px;
     padding: 5px 10px;
@@ -47,11 +49,17 @@
     box-sizing: border-box;
     width: 30px;
     height: 30px;
+    margin: auto;
     border: none;
     border-radius: 0 3px 3px 0;
-    background: url(img/search.png) center center no-repeat;
     background-color: $colorGoldDark;
     cursor: pointer;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      @extend .svg_search;
+    }
 
     &:hover {
       background-color: $colorGold;

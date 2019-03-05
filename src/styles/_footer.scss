@@ -17,24 +17,35 @@
 
 
 /* Arrow-up*/
-.arrow_up {
+.arrow-up {
   position: fixed;
   right: 20px;
   bottom: 20px;
-  display: none;
+  display: inline-flex;
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: url(img/arrow_up.jpg) no-repeat 0 0;
+  background-color: transparentize($cBlack, 0.5);
   cursor: pointer;
   z-index: 5;
 
+  &:before {
+    content: '';
+    display: inline-block;
+    margin: auto;
+    @extend .svg_arrow-up;
+  }
+
   &:hover {
-    box-shadow: 0 0 12px gold;
+    background-color: transparentize($cBlack, 0.2);
   }
 
   &:active {
-    opacity: 0.8;
+    box-shadow: 0 0 12px $colorGold;
+  }
+  
+  &_hidden {
+    display: none;
   }
 }
 

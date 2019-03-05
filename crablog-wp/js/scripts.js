@@ -1,14 +1,17 @@
 $(document).ready(function(){
-  $(window).on('scroll', animateElements);
-  $('.arrow_up').on('click', scrollToTop);
+  $arrowUp = $('.arrow-up')
+
+  toggleArrowUp();
+  $(window).on('scroll', toggleArrowUp);
+  $arrowUp.on('click', scrollToTop);
 
 
   /* ---- Show/Hide ScrollToTop Button ---- */
-  function animateElements() {
+  function toggleArrowUp() {
     if ($(this).scrollTop() > 0) {
-      $('.arrow_up').css({'display': 'block'});
+      $arrowUp.removeClass('arrow-up_hidden');
     } else {
-      $('.arrow_up').css({'display': 'none'});
+      $arrowUp.addClass('arrow-up_hidden');
     }
   }
 

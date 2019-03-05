@@ -11,8 +11,11 @@
 
 <!--Point VK and FB thumbnail for displaying-->
 <meta property="og:image" content="http://tamdaleko.ru/wp-content/themes/zrak-wp/images/logo-socnet.png" />
+<meta property="og:title" content="Crablog.ru - блог о фронтенде" />
+<meta property="og:url" content="<?php bloginfo('template_url'); ?>" />
+<meta property="og:image" content="http://tamdaleko.ru/wp-content/themes/zrak-wp/favicon.png" />
 
-<link rel="shortcut icon" type="image/png" href="http://tamdaleko.ru/wp-content/themes/zrak-wp/favicon.ico" />
+<link rel="icon" href="http://tamdaleko.ru/wp-content/themes/zrak-wp/favicon.png" type="image/png" />
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/normalize.css" />
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/style.css" />
 <!--<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen,projection" />  -->

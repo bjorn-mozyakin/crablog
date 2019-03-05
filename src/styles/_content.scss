@@ -38,6 +38,17 @@
     line-height: 1.7;
   }
 
+  &__info {
+    &:before {
+      position: relative;
+      top: 2px;
+      content: '';
+      display: inline-block;
+      margin-right: 6px;
+      @extend .svg_date
+    }
+  }
+
   h2 a {
     color: $colorBgDark;
 
