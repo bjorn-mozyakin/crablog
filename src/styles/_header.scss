@@ -45,11 +45,12 @@
   }
 
   &__search-btn {
-    display: inline-block;
+    display: inline-flex;
     box-sizing: border-box;
     width: 30px;
     height: 30px;
-    margin: auto;
+    margin: 0;
+    padding: 0;
     border: none;
     border-radius: 0 3px 3px 0;
     background-color: $colorGoldDark;
@@ -58,6 +59,7 @@
     &:before {
       content: '';
       display: inline-block;
+      margin: auto;
       @extend .svg_search;
     }
 

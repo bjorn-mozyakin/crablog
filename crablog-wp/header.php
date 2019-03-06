@@ -16,7 +16,6 @@
 <meta property="og:image" content="http://tamdaleko.ru/wp-content/themes/zrak-wp/favicon.png" />
 
 <link rel="icon" href="http://tamdaleko.ru/wp-content/themes/zrak-wp/favicon.png" type="image/png" />
-<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/normalize.css" />
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/style.css" />
 <!--<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen,projection" />  -->
 

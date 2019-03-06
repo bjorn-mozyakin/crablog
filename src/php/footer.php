@@ -5,9 +5,7 @@
       <div class="arrow-up arrow-up_hidden"></div>
     </footer>
 
-
     <?php wp_footer(); ?>
-    </div>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135689189-1"></script>
