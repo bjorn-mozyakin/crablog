@@ -3,17 +3,21 @@
 <head>
 <title><?php bloginfo('name'); ?><?php wp_title(); ?></title>
 <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
-<meta name="description" content="" />
-<meta name="keywords" content="" />
+<meta name="description" content="Статьи о фронтенде. Истории из жизни разработчика." />
+<meta name="keywords" content="фронтенд фронтэнд frontend css js препроцессоры препроцессор sublime flexbox флексбокс" />
 
 <!--Disable auto scale on mobile devices-->
 <meta name="viewport" content="initial-scale=1" />
 
 <!--Point VK and FB thumbnail for displaying-->
-<meta property="og:image" content="http://tamdaleko.ru/wp-content/themes/zrak-wp/images/logo-socnet.png" />
+<meta property="og:url" content="https://<?php bloginfo('name'); ?>" />
+<meta property="og:site_name" content="<?php bloginfo('name'); ?>">
 <meta property="og:title" content="Crablog.ru - блог о фронтенде" />
-<meta property="og:url" content="<?php bloginfo('template_url'); ?>" />
-<meta property="og:image" content="<?php bloginfo('template_url'); ?>/favicon.png" />
+<meta property="og:type" content="website">
+<meta property="og:image" content="<?php bloginfo('template_url'); ?>/crablog.png" />
+<meta property="og:locale" content="ru_RU">
+<meta property="og:description" content="Статьи о фронтенде. Истории из жизни разработчика.">
+<meta property="fb:app_id" content="305340583499240" />
 
 <link rel="icon" href="<?php bloginfo('template_url'); ?>/favicon.png" type="image/png" />
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/style.css" />
