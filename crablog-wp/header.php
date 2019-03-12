@@ -26,7 +26,7 @@
 <?php wp_head(); ?>
 
 <!--Adding scripts-->
-<script src='<?php bloginfo('template_url'); ?>/js/scripts-d51fca97dd.min.js'></script>
+<script src='<?php bloginfo('template_url'); ?>/js/scripts-d51fca97dd.min.js' async></script>
 
 <!-- Adding scripts for VK-comments widget -->
 <!--

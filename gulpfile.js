@@ -48,10 +48,10 @@ gulp.task('clean', function(){
 // PHP
 gulp.task('php', function(){
   return gulp.src('./src/php/**/*')
-    .pipe(revReplace({
+    .pipe(gulpIf(!isDevelopment, revReplace({
       replaceInExtensions: ['.php'],
       manifest: gulp.src('./src/manifest/**/*')
-    }))
+    })))
     .pipe(gulp.dest('./crablog-wp'));
 });
 
@@ -97,6 +97,7 @@ var config = {
 };
 
 gulp.task('create_sprite', function () {
+  del('./src/img/**/sprite-*.svg')
   return gulp.src('./src/svg/**/*.svg')
     .pipe(svgSprite(config))
     .pipe(gulp.dest('./src'));
