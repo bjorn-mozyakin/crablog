@@ -32,7 +32,6 @@
 <![endif]-->
 
 <!--Adding scripts-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script src='<?php bloginfo('template_url'); ?>/js/scripts.js'></script>
 
 <!-- Adding scripts for VK-comments widget -->
