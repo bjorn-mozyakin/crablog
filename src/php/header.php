@@ -25,12 +25,6 @@
 
 <?php wp_head(); ?>
 
-<!--Imitation media quieries для IE-9-->
-<!--[if lte IE 9]>
-<script async src="<?php bloginfo('template_url'); ?>/js/respond.min.js"></script>
-<script src="//cdn.polyfill.io/v1/polyfill.min.js"></script>
-<![endif]-->
-
 <!--Adding scripts-->
 <script src='<?php bloginfo('template_url'); ?>/js/scripts.js'></script>
 

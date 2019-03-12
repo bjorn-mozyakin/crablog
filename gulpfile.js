@@ -48,13 +48,17 @@ gulp.task('clean', function(){
 // PHP
 gulp.task('php', function(){
   return gulp.src('./src/php/**/*')
+    .pipe(revReplace({
+      replaceInExtensions: ['.php'],
+      manifest: gulp.src('./src/manifest/**/*')
+    }))
     .pipe(gulp.dest('./crablog-wp'));
 });
 
 // IMG
 gulp.task('img_sprite', function(){
   // return gulp.src(['./src/**/*.jpg', './src/**/*.png', './src/**/*.ico', '!src/images/icons/**/*', '!src/images/icons'])
-  return gulp.src(['./src/img/sprite.svg'])
+  return gulp.src(['./src/img/sprite*.svg'])
     .pipe(gulp.dest('./crablog-wp/img'));
 });
 
@@ -85,7 +89,7 @@ var config = {
           dest: 'styles/_sprite.scss'
         }
       },
-      bust: false,
+      bust: true,
       dimensions: true,
       prefix: '.svg_'
     }
@@ -116,10 +120,15 @@ gulp.task('sass', function(){
     }))
     .pipe(autoprefixer('last 2 versions', '> 1%', 'ie 11'))
     .pipe(gulpIf(!isDevelopment, combine(
-      cssnano()
-      // rename({suffix: '.min'}) ))
+      cssnano(),
+      rev(),
+      rename({suffix: '.min'})
     )))
-    .pipe(gulp.dest('./crablog-wp'));
+    .pipe(gulp.dest('./crablog-wp'))
+    .pipe(gulpIf(!isDevelopment, combine(
+      rev.manifest('css.json'),
+      gulp.dest('./src/manifest')
+    )));
 });
 
 // Scripts
@@ -127,24 +136,29 @@ gulp.task('scripts', function(){
   return gulp.src('./src/js/**')
     .pipe(gulpIf(!isDevelopment, combine(
       uglify(),
-      // rename({suffix: '.min'})
+      rev(),
+      rename({suffix: '.min'})
     )))
-    .pipe(gulp.dest('./crablog-wp/js'));
+    .pipe(gulp.dest('./crablog-wp/js'))
+    .pipe(gulpIf(!isDevelopment, combine(
+      rev.manifest('js.json'),
+      gulp.dest('./src/manifest')
+    )));
 });
 
 
 
 // complicated tasks
 gulp.task('build', function(){
-  runSequence('clean', 'php', 'assets', 'fonts', 'sass', 'scripts');
+  runSequence('clean', 'assets', 'fonts', 'sass', 'scripts', 'php');
 });
 
 gulp.task('watch', function() {
-  gulp.watch('./src/php/**/*.php', ['php']);
   gulp.watch('./src/img/**/*.*', ['assets']);
   gulp.watch('./src/svg/**/*.*', ['assets']);
   gulp.watch(['./src/styles/**/*.scss'], ['sass']);
   gulp.watch(['./src/js/**/*.js'], ['scripts']);
+  gulp.watch('./src/php/**/*.php', ['php']);
 })
 
 gulp.task('serve', function(){
