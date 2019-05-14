@@ -1,12 +1,32 @@
 document.addEventListener('DOMContentLoaded', function() {
-  var arrowUp = document.querySelector('.arrow-up');
+  function Article(options) {
+    this.article = options.article;
+    this.articleContainer = this.article.querySelector('.article__container');
+    // this.articleInfo = this.articleContainer.querySelector('.article__info');
+    this.articleContents = this.articleContainer.querySelector('.contents');
+    this.articleTitles = this.articleContainer.querySelectorAll('h2, h3, h4, h5 ,h6');
 
-  toggleArrowUp();
-  window.addEventListener('scroll', toggleArrowUp);
-  arrowUp.addEventListener('click', scrollToTop);
+    if (this.articleContents) this._createContents();
+  }
 
+  Article.prototype._createContents = function() {
+    var contentsContainer = document.createElement('div');
+    contentsContainer.className = 'contents__container';
+    contentsContainer.innerHTML = '<div class="contents__title">Содержание статьи</div>';
 
+    for (var i = 0; i < this.articleTitles.length; i++) {
+      var level = this.articleTitles[i].nodeName[1];
+      var anchorName = (level - 1) + '_' + (i + 1);
+      this.articleTitles[i].setAttribute('id', anchorName);
 
+      var chapter = document.createElement('div');
+      chapter.className = 'contents__level_' + (level - 1);
+      chapter.innerHTML = '<a href="#' + anchorName + '">' + this.articleTitles[i].innerHTML + '</a>';
+      contentsContainer.appendChild(chapter);
+    }
+
+    this.articleContents.appendChild(contentsContainer);
+  };
 
   /* ---- Show/Hide ScrollToTop Button ---- */
   function toggleArrowUp() {
@@ -43,4 +63,14 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
+
+  var arrowUp = document.querySelector('.arrow-up');
+
+  toggleArrowUp();
+  window.addEventListener('scroll', toggleArrowUp);
+  arrowUp.addEventListener('click', scrollToTop);
+
+  new Article({
+    article: document.querySelector('.article')
+  });
 });
