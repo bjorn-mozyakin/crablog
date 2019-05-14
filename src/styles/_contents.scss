@@ -1,8 +1,11 @@
 .contents {
-  padding: 10px;
-  border: 1px solid #c0c0c0;
-  border-radius: 3px;
-  background-color: $colorCodeBg;
+
+  &__container {
+    padding: 10px;
+    border: 1px solid $colorCodeBorder;
+    border-radius: 3px;
+    background-color: $colorCodeBg;
+  }
 
   &__title {
     font-weight: 700;

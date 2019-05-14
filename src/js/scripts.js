@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     this.articleContents = this.articleContainer.querySelector('.contents');
     this.articleTitles = this.articleContainer.querySelectorAll('h2, h3, h4, h5 ,h6');
 
-    if (this.articleContents) this._createContents();
+    if (!this.article.classList.contains('article_brief') && this.articleContents) this._createContents();
   }
 
   Article.prototype._createContents = function() {

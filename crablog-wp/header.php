@@ -20,13 +20,13 @@
 <meta property="fb:app_id" content="305340583499240" />
 
 <link rel="icon" href="<?php bloginfo('template_url'); ?>/favicon.png" type="image/png" />
-<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/style-d0bed7126b.min.css" />
+<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/style-74d71a92bf.min.css" />
 <!--<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen,projection" />  -->
 
 <?php wp_head(); ?>
 
 <!--Adding scripts-->
-<script src='<?php bloginfo('template_url'); ?>/js/scripts-ee18fb9f70.min.js' async></script>
+<script src='<?php bloginfo('template_url'); ?>/js/scripts-b55b9a3398.min.js' async></script>
 
 <!-- Adding scripts for VK-comments widget -->
 <!--
