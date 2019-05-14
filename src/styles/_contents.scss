@@ -1,0 +1,48 @@
+.contents {
+  padding: 10px;
+  border: 1px solid #c0c0c0;
+  border-radius: 3px;
+  background-color: $colorCodeBg;
+
+  &__title {
+    font-weight: 700;
+  }
+
+  $levels: (
+          "1": "20px",
+          "2": "40px",
+          "3": "60px",
+          "4": "80px",
+          "5": "100px"
+  );
+
+  @each $level, $padding in $levels {
+    &__level_#{$level} {
+      display: flex;
+      align-items: center;
+      padding-left: #{$padding};
+
+      &::before {
+        display: inline-block;
+        content: '';
+        width: 4px;
+        height: 4px;
+        margin-right: 10px;
+        border-radius: 50%;
+        background-color: $cBlack;
+      }
+    }
+  }
+
+
+  //$icons: ("eye": "\f112", "start": "\f12e", "stop": "\f12f");
+  //
+  //@each $name, $glyph in $icons {
+  //  .icon-#{$name}:before {
+  //    display: inline-block;
+  //    font-family: "Icon Font";
+  //    content: $glyph;
+  //  }
+  //}
+
+}
