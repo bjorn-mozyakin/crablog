@@ -1,6 +1,7 @@
 /* font-family: "LatoRegular"; */
 @font-face {
   font-family: "Lato";
+  font-display: swap;
   src: url("fonts/LatoRegular/LatoRegular.eot");
   src: url("fonts/LatoRegular/LatoRegular.eot?#iefix") format("embedded-opentype"), url("fonts/LatoRegular/LatoRegular.woff") format("woff"), url("fonts/LatoRegular/LatoRegular.ttf") format("truetype");
   font-style: normal;
@@ -9,6 +10,7 @@
 
 @font-face {
   font-family: "Lato";
+  font-display: swap;
   src: url("fonts/LatoItalic/LatoItalic.eot");
   src: url("fonts/LatoItalic/LatoItalic.eot?#iefix") format("embedded-opentype"), url("fonts/LatoItalic/LatoItalic.woff") format("woff"), url("fonts/LatoItalic/LatoItalic.ttf") format("truetype");
   font-style: italic;
@@ -17,6 +19,7 @@
 
 @font-face {
   font-family: "Lato";
+  font-display: swap;
   src: url("fonts/LatoBold/LatoBold.eot");
   src: url("fonts/LatoBold/LatoBold.eot?#iefix") format("embedded-opentype"), url("fonts/LatoBold/LatoBold.woff") format("woff"), url("fonts/LatoBold/LatoBold.ttf") format("truetype");
   font-style: normal;
