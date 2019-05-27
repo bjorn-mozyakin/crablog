@@ -7,7 +7,7 @@ Template Name: zrak-wp
 <div class="main">
   <div class="main__container">
     <div class="content">
-      <article class="article">
+      <article class="article article_brief">
         <div class="article__container">
           <?php if ( have_posts() ) : ?>
           <h2 class="search-results">Результаты поиска для: <?php the_search_query(); ?></h2>
