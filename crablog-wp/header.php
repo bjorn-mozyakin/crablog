@@ -20,7 +20,7 @@
 <meta property="fb:app_id" content="305340583499240" />
 
 <link rel="icon" href="<?php bloginfo('template_url'); ?>/favicon.png" type="image/png" />
-<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/style-340b01ed17.min.css" />
+<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/style-84563a693c.min.css" />
 <!--<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen,projection" />  -->
 
 <?php wp_head(); ?>
