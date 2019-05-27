@@ -10,7 +10,7 @@ Template Name: zrak-wp
       <!--<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>-->
         <article class="article">
           <div class="article__container">
-            <h1><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
+            <h1 class="article__title"><?php the_title(); ?></h1>
             <p class="article__info"><?php the_time('j F Y'); ?> | <!--<?php the_author_posts_link(); ?> | --><?php the_category(', '); ?><!--в <?php the_time('G:i'); ?> | <?php comments_number('Нет комментариев', '1 комментарий', '% comments'); ?>--></p>
             <p><?php the_content(); ?></p>
             <p class="tags"><?php the_tags(); ?></p>

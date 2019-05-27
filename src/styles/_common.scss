@@ -11,6 +11,14 @@ body {
   background: linear-gradient(to bottom, $colorBg, $colorBgLight);
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+p {
+  margin: 10px 0;
+}
+
 a {
   color: $colorGoldDark;
   text-decoration: none;
@@ -20,9 +28,14 @@ a {
   }
 }
 
+ul {
+  margin: 0;
+}
+
 img.size-medium {
   width: 90%;
   height: 90%;
   margin: 10px 0;
   border-radius: 3px;
 }
+
